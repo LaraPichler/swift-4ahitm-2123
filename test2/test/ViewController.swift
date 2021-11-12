@@ -20,32 +20,29 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        model.numberToGuess = Int(arc4random_uniform(100));
+        model.numberToGuess = Int(arc4random_uniform(100))
         label.text = "Try to guess the number!"
         
         print(model.numberToGuess)
     }
     
-    @IBAction func onChangeTextField(_ sender: UITextField) {
-        if(model.isValid(guess: Int(textField.text!))){
-        buttonGuess.isEnabled = true;
-        } else {
-            buttonGuess.isEnabled = false
-        }
+    @IBAction func onChangeTextField(_ sender: UITextField){
+        buttonGuess.isEnabled = model.isValid(guess: Int(textField.text!))
     }
     
     @IBAction func onclick(_ sender: UIButton) {
-        // Check for input not nill
-        //if(checkNumber()){
-            
-        //}
-        
-        model.counterOfTrys+=1
+        // Check for input not nil
+       // model.counterOfTrys += 1
     }
     
     func compare(guessedString: String) -> Int! {
         let guess = Int(guessedString)!
         return model.compare(guess: guess)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultViewController = segue.destination as? ResultViewController
+        resultViewController?.model = model
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

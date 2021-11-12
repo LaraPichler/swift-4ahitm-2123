@@ -10,18 +10,33 @@
         <!--Detail-->
         <scene sceneID="T9m-Zd-neN">
             <objects>
-                <viewController id="5tY-dB-jEQ" sceneMemberID="viewController">
+                <viewController id="5tY-dB-jEQ" customClass="ResultViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g6x-9p-3Vu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm7-Ke-G0h">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J1G-eo-a0M"/>
                         <color key="backgroundColor" red="0.65472131000092137" green="0.7693973183631897" blue="0.66951114528502564" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lm7-Ke-G0h" firstAttribute="centerX" secondItem="g6x-9p-3Vu" secondAttribute="centerX" id="3vY-Hg-KuC"/>
+                            <constraint firstItem="lm7-Ke-G0h" firstAttribute="centerY" secondItem="g6x-9p-3Vu" secondAttribute="centerY" id="NHe-so-oZO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="mEs-i7-Ico"/>
+                    <connections>
+                        <outlet property="label" destination="lm7-Ke-G0h" id="GPb-2v-uLB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adb-5q-y7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-943" y="385"/>
+            <point key="canvasLocation" x="542" y="-241"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -76,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="89"/>
+            <point key="canvasLocation" x="-230" y="-241"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="htg-fj-btv">
